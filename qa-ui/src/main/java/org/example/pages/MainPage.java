@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import io.qameta.allure.Step;
 import org.example.elements.Button;
 import org.example.elements.TextField;
 import org.example.elements.TextLink;
@@ -36,6 +37,7 @@ public class MainPage extends Page {
         return this;
     }
 
+    @Step("Open Main page")
     @Override
     public MainPage open() {
         LOGGER.info("Is about to open Main page");
@@ -90,6 +92,7 @@ public class MainPage extends Page {
         public final TextField password = new TextField(driver, By.id("register-password-modal"), "Password");
         public final Button registerButton = new Button(driver, By.xpath("//button[normalize-space()='Register']"));
 
+        @Step("Fill in the register form with the user: [{user}]")
         public void fillResisterForm(User user) {
             userName.setValue(user.getUserName());
             firstName.setValue(user.getFirstName());

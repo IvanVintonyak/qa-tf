@@ -1,5 +1,6 @@
 package org.example.elements;
 
+import io.qameta.allure.Step;
 import org.example.utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +19,7 @@ public class TextField extends UIElement {
         super(driver, by, labelName);
     }
 
+    @Step("Fill in [{this.labelName}], with value: [{value}]")
     public void setValue(String value) {
         WaitUtils.waitUntilElementIsDisplayed(getWebElement());
         getWebElement().clear();
