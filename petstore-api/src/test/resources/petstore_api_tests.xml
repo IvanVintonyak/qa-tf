@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke API Test Suite" verbose="0" thread-count="30" parallel="methods">
+
+    <test name="Petstore API tests">
+        <classes>
+<!--            <class name="com.socks.tests.users.UsersTest2"/>-->
+
+        </classes>
+    </test>
+</suite>
