@@ -29,6 +29,12 @@ public class ApiService implements ProjectConfigImpl {
                 .contentType(ContentType.JSON)
                 .filters(getFilters());
     }
+    protected RequestSpecification requestMultipart() {
+        return RestAssured
+                .given(setRequestSpecification())
+                .accept(ContentType.JSON)
+                .filters(getFilters());
+    }
 
     private List<Filter> getFilters() {
         if (config.logging()) {

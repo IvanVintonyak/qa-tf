@@ -5,8 +5,18 @@
 
     <test name="Petstore API tests">
         <classes>
-<!--            <class name="com.socks.tests.users.UsersTest2"/>-->
-
+            <class name="io.swagger.petstore.tests.pet.PetIdUploadImageTest"/>
+        </classes>
+    </test>
+    <test name="Petstore User API tests">
+        <classes>
+            <class name="io.swagger.petstore.tests.user.GetUserLogoutTest"/>
+            <class name="io.swagger.petstore.tests.user.PostUserTest"/>
+        </classes>
+    </test>
+    <test name="Petstore Store API tests">
+        <classes>
+            <class name="io.swagger.petstore.tests.store.PostStoreTest"/>
         </classes>
     </test>
 </suite>

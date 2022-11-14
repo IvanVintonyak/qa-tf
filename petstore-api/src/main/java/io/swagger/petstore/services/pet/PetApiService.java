@@ -9,13 +9,13 @@ import java.io.File;
 
 public class PetApiService extends ApiService {
     @Step
-    public AssertableResponse postPetPetIdUploadImage(int petId, String additionalMetadata, String filePath){
-        return new AssertableResponse(request()
+    public void postPetPetIdUploadImage(int petId, String additionalMetadata, String filePath){
+        new AssertableResponse(requestMultipart()
                 .pathParam("petId", petId)
-                .queryParam("additionalMetadata", additionalMetadata)
+                .param("additionalMetadata", additionalMetadata)
                 .multiPart("file", new File(filePath))
                 .when()
                 .post("pet/{petId}/uploadImage")
-        )
+        );
     }
 }
