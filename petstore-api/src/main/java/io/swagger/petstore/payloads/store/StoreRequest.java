@@ -1,6 +1,7 @@
 package io.swagger.petstore.payloads.store;
 
 import lombok.Data;
+import sun.util.calendar.LocalGregorianCalendar;
 
 import java.util.Date;
 
