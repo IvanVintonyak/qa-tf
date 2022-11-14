@@ -13,4 +13,8 @@ public class Conditions {
     public BodyFieldCondition bodyField(String jsonPath, Matcher<String> matcher) {
         return new BodyFieldCondition(jsonPath, matcher);
     }
+
+    public GeneralResponseCondition generalResponse(int code, String type){
+        return new GeneralResponseCondition(code, type);
+    }
 }

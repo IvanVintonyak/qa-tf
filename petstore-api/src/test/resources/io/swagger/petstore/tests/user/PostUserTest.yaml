@@ -1,0 +1,17 @@
+---
+- id: 0
+  username: Ivan
+  firstName: Ivan
+  lastName: V
+  email: navi@test.com
+  password: ivan
+  phone: 123123123
+  userStatus: 0
+- id: 0
+  username: Ivan2
+  firstName: Ivan2
+  lastName: V2
+  email: navi2@test.com
+  password: ivan2
+  phone: 123123123
+  userStatus: 0
