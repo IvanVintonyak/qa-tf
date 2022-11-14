@@ -9,8 +9,9 @@ import java.io.File;
 
 public class PetApiService extends ApiService {
     @Step
-    public void postPetPetIdUploadImage(int petId, String additionalMetadata, String filePath){
-        new AssertableResponse(requestMultipart()
+    public AssertableResponse    postPetPetIdUploadImage(int petId, String additionalMetadata, String filePath)
+    {
+       return new AssertableResponse(requestMultipart()
                 .pathParam("petId", petId)
                 .param("additionalMetadata", additionalMetadata)
                 .multiPart("file", new File(filePath))
