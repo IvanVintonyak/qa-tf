@@ -16,6 +16,7 @@ public class StoreRequestUtil implements ProjectConfigImpl {
         StoreRequest storeRequest = new StoreRequest();
         storeRequest.setId(0);
         storeRequest.setPetId(0);
+        storeRequest.setShipDate(new Date());
         return storeRequest;
 
 
